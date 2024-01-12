@@ -1,0 +1,688 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+#lupa img{
+
+    align-items: left;
+    height: 30px;
+    width: 30px;
+    display: block;
+    margin: -55px ;
+    margin-top: 10px;
+    margin-bottom: -30px;
+    margin-left: 10px;
+}
+nav{
+
+    text-align: right;
+    padding: 30px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+   z-index: 10;
+    
+    
+}
+
+nav ul li{
+
+    display: inline-block;
+    margin: 10px;
+    
+    
+    
+}
+nav ul li a{
+
+    text-decoration: none;
+    color:black;
+    position: relative;
+    width: 100%;
+    
+    
+}
+
+.menu-icon img{
+
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+
+    
+}
+.menu-icon, #check{
+    display: none;
+}
+
+nav ul li a::before, nav ul li a::after{
+    content: '';
+    
+    border-bottom: 2px solid rgba(171, 142, 105);
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s;
+
+}
+nav ul li a::before{
+
+    width: 90%;
+    bottom: -5px;
+    right: 0;
+
+}
+nav ul li a::after{
+
+    width: 60%;
+    bottom: -10px;
+    left: 0;
+}
+
+nav ul li a.actiu::before,
+nav ul li a:hover::before{
+
+    opacity: 1;
+    width: 70%;
+    
+
+}
+nav ul li a.actiu::after,
+nav ul li a:hover::after{
+
+    opacity: 1;
+    width: 40%;
+    
+}
+
+
+#capçalera{
+
+    padding: 200px;
+    font-size: 4em;
+    background-image:linear-gradient(rgba(171, 142, 105, 0.7), rgba(206,175,134,0.7)),url(imatges/iso4.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+
+}
+
+#intro h2{
+
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+}
+
+#intro p{
+
+    padding: 20px;
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-bottom: 80px;
+    text-align: center;
+    line-height: 1.5;
+    margin-left: 80px;
+    margin-right: 80px;
+    border-bottom: 2px solid rgba(171, 142, 105);
+}
+
+.crads{
+
+    width: 80%;
+    margin: 80px auto;
+    text-align: center;
+    margin-left: 160px;
+}
+
+
+
+
+.card{
+
+    position: relative;
+    width: 25%;
+    height: 300px;
+    margin-right: 80px;
+    display: inline-block;
+    text-align: center;
+   
+    
+    
+    
+}
+
+.card .face{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: .5s;
+    
+
+}
+
+.card .front{
+
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px;
+}
+
+.card .front section{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-image: linear-gradient(rgba(171, 142, 105, 0.4), rgba(206,175,134,0.4)), url(imatges/ortogonal2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+}
+
+
+.card .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    bottom: 150px;
+    height: 150px;
+    color:white;
+    line-height: 300px;
+    font-weight:bolder;
+    font-size: 2em;
+    text-align: center;
+
+
+}
+
+.card .back{
+
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(213, 188, 154);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px;
+}
+
+.card .back .link a{
+
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    
+}
+
+.card .back .link a:hover{
+
+    background-color: white;
+    color: rgb(213, 188, 154);
+}
+
+.card .back p{
+
+    font-size: 1.2em;
+    margin-top: 30px;
+    padding: 15px;
+    
+}
+
+.card:hover .front{
+
+    transform: perspective(600px) rotateY(180deg);
+
+}
+
+.card:hover .back{
+
+    transform: perspective(600px) rotateY(360deg);
+    
+}
+
+
+.card1{
+
+    position: relative;
+    width: 25%;
+    height: 300px;
+    margin-right: 80px;
+    display: inline-block;
+    text-align: center;
+    
+}
+
+.card1 .face1{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: .5s;
+
+}
+
+.card1 .front1{
+
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px;
+}
+
+.card1 .front1 section{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-image: linear-gradient(rgba(171, 142, 105, 0.6), rgba(206,175,134,0.4)), url(imatges/oblicua.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+}
+
+
+.card1 .front1 h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    bottom: 150px;
+    height: 150px;
+    color:white;
+    line-height: 300px;
+    font-weight:bolder;
+    font-size: 2em;
+    text-align: center;
+
+
+}
+
+.card1 .back1{
+
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(213, 188, 154);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px;
+}
+
+.card1 .back1 .link1 a{
+
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    
+}
+
+.card1 .back1 .link1 a:hover{
+
+    background-color: white;
+    color: rgb(213, 188, 154);
+}
+
+.card1 .back1 p{
+
+    font-size: 1.2em;
+    margin-top: 30px;
+    padding: 15px;
+    
+}
+
+.card1:hover .front1{
+
+    transform: perspective(600px) rotateY(180deg);
+
+}
+
+.card1:hover .back1{
+
+    transform: perspective(600px) rotateY(360deg);
+    
+}
+
+footer{
+
+    background-color:rgba(171, 142, 105, 0.7) ;
+}
+footer .contacte{
+
+  
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+footer .contacte p{
+
+    
+    text-align: center;
+    margin-bottom: 20px;
+    
+    
+}
+footer .contacte img{
+
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+}
+
+footer p{
+
+text-align: center;
+padding-bottom: 20px;
+
+}
+
+/*LAYOUT*/
+
+#container{
+
+    display: flex;
+
+}
+
+nav{
+
+    flex: 1 100%;
+    order:1;
+}
+
+
+header{
+
+
+    flex: 1 100%;
+    order: 1;
+
+}
+
+main{
+
+    flex: 1 100%;
+    order: 2;
+}
+
+footer{
+
+    flex: 1 100%;
+    order: 3;
+}
+
+@media (max-width: 1150px) {
+    
+    #container {
+        flex-direction: column;
+    }
+   
+    #lupa img {
+        padding-left: 20px;
+        margin-bottom: 8px;
+    }
+    .checkbtn {
+
+        display: block;
+    }
+    .menu-icon{
+
+        display: block;
+        position: fixed;
+        top:40px;
+        right: 40px;
+        cursor: pointer;
+    }
+     ul{
+
+        overflow: hidden;
+        position:fixed;
+        top: 100px;
+        
+        background-color:rgba(255, 255, 255, 0.5);
+        width: 20%;
+        bottom: 0;
+        text-align: center;
+    }
+
+    nav ul {
+       
+        right: -100%; 
+        transition: right 2s ease; 
+    }
+
+
+    header ul li{
+
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0; 
+    
+    }
+
+    nav ul li{
+
+        display: inline-block;
+        margin: 30px 30px; 
+        
+    }
+
+    nav ul.menu-visible {
+        right: 0; 
+        transition: right 1s ease;
+    }
+
+    #capçalera {
+        padding: 100px;
+        font-size: 3em;
+    }
+
+    
+    #intro h2, #intro p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .crads{
+
+        width: 70%;
+        margin: 80px auto;
+        text-align: center;
+    }
+
+    .card{
+
+        width: 30%;
+        height: 350px;
+        margin:5px auto;
+    }
+
+    .card1{
+
+        width: 30%;
+        height: 350px;
+        margin: 5px auto;
+        margin-left: 60px;
+    }
+
+    .card2{
+
+        width: 30%;
+        height: 350px;
+        margin:60px auto;
+
+    }
+
+    .card3{
+
+        width: 30%;
+        height: 350px;
+        margin: 60px auto;
+        margin-left: 60px;
+    }
+   
+
+    footer .contacte p{
+
+    
+        text-align: center;
+        margin-bottom: 0;
+        padding: 0;
+        
+        
+    }
+    footer .contacte img{
+    
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        padding-top: 10px;
+    }
+    
+    footer p{
+    
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 0;
+    
+    
+    }
+
+
+    
+}
+
+@media (max-width: 800px) {
+
+    ul{
+
+        display: block;
+        position:fixed;
+        top: 100px;
+        right: 0;
+        background-color:rgba(255, 255, 255, 0.5);
+        width: 30%;
+        bottom: 0;
+        text-align: center;
+    }
+
+
+    header ul li{
+
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0; 
+    
+    }
+    
+    nav ul li{
+
+        display: inline-block;
+        margin: 30px 30px; 
+       
+        
+    }
+
+    #capçalera{
+
+        font-size: 2em;
+    }
+
+    .crads{
+
+        width: 75%;
+        margin: 80px auto;
+        text-align: center;
+    }
+
+    .card{
+
+        width: 50%;
+        height: 300px;
+        margin: 30px auto;
+        
+    }
+
+    .card1{
+
+        width: 50%;
+        height: 300px;
+        margin: 30px auto;
+        
+    }
+
+    .card2{
+
+        width: 50%;
+        height: 300px;
+        margin: 30px auto;
+        
+
+    }
+
+    .card3{
+
+        width: 50%;
+        height: 300px;
+        margin: 30px auto;
+        
+    }
+
+   
+
+    footer .contacte p{
+
+    
+        text-align: center;
+        font-size:0.90em;
+        margin-bottom: 0;
+        padding: 0;
+        
+        
+    }
+    footer .contacte img{
+    
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+        padding-top: 10px;
+    }
+
+    footer .contacte{
+
+
+        width: 32%;
+    }
+
+
+
+
+}

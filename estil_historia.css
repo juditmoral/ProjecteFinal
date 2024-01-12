@@ -1,0 +1,1344 @@
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+#lupa img {
+
+    align-items: left;
+    height: 30px;
+    width: 30px;
+    display: block;
+    margin: -55px;
+    margin-top: 10px;
+    margin-bottom: -30px;
+    margin-left: 10px;
+}
+
+nav {
+
+    text-align: right;
+    padding: 30px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+
+}
+
+nav ul li {
+
+    display: inline-block;
+    margin: 10px;
+
+
+
+}
+
+nav ul li a {
+
+    text-decoration: none;
+    color: black;
+    position: relative;
+    width: 100%;
+
+
+}
+
+.menu-icon img {
+
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+
+
+}
+
+.menu-icon,
+#check {
+    display: none;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+    content: '';
+
+    border-bottom: 2px solid rgba(171, 142, 105);
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s;
+
+}
+
+nav ul li a::before {
+
+    width: 90%;
+    bottom: -5px;
+    right: 0;
+
+}
+
+nav ul li a::after {
+
+    width: 60%;
+    bottom: -10px;
+    left: 0;
+}
+
+nav ul li a.actiu::before,
+nav ul li a:hover::before {
+
+    opacity: 1;
+    width: 70%;
+
+
+}
+
+nav ul li a.actiu::after,
+nav ul li a:hover::after {
+
+    opacity: 1;
+    width: 40%;
+
+}
+
+
+#capçalera {
+
+
+
+    padding: 200px;
+
+    font-size: 4em;
+    background-image: linear-gradient(rgba(171, 142, 105, 0.7), rgba(206, 175, 134, 0.7)), url(imatges/primerafotohistroia.webp);
+    background-size: cover;
+    background-position: 10px;
+    color: white;
+    text-align: center;
+
+}
+
+#intro h2 {
+
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+}
+
+#intro p {
+
+    padding: 20px;
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-bottom: 80px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-left: 80px;
+    margin-right: 80px;
+
+
+}
+
+
+
+#antiguitat h2 {
+
+
+    padding-top: -50px;
+    padding-left: 600px;
+    padding-right: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: left;
+}
+
+#antiguitat aside p {
+
+    padding: 20px;
+    padding-left: 600px;
+    padding-right: 160px;
+    padding-bottom: 80px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-left: 80px;
+    margin-right: 80px;
+    float: right;
+
+
+
+}
+
+#antiguitat aside img {
+
+    width: 350px;
+    height: 200px;
+    float: left;
+    padding-left: 250px;
+    margin-top: -270px;
+
+
+
+}
+
+#antiguitat aside:nth-of-type(2) p {
+
+    float: left;
+    padding-left: 290px;
+    margin-top: -90px;
+    text-align: center;
+    color: rgb(109, 108, 108);
+
+
+}
+
+
+.popup-image{
+
+    position: fixed;
+    top:0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image span{
+
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.popup-image img{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+
+
+
+#edatmitjana {
+
+    float: left;
+}
+
+#edatmitjana h2 {
+
+
+    padding: 20px;
+    padding-left: 160px;
+    padding-right: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: -60px;
+
+
+
+}
+
+#edatmitjana p {
+
+    padding: 20px;
+    padding-left: 160px;
+    padding-right: 100px;
+    margin-left: 80px;
+    margin-right: 600px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: -15px;
+
+
+}
+
+#edatmitjana aside img {
+
+    width: 350px;
+    height: 200px;
+    float: right;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 160px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: -250px;
+
+
+
+}
+
+#edatmitjana aside:nth-of-type(2) p {
+
+    float: right;
+    margin-right: 250px;
+    margin-top: -50px;
+    color: rgb(109, 108, 108);
+
+}
+
+#renaixement {
+
+    float: right;
+}
+
+#renaixement h2 {
+
+
+    padding: 20px;
+    padding-left: 600px;
+    padding-right: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 0px;
+
+
+}
+
+#renaixement p {
+
+    padding: 20px;
+    padding-left: 600px;
+    padding-right: 160px;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: -15px;
+
+
+}
+
+#renaixement aside img {
+
+    width: 350px;
+    height: 200px;
+    float: left;
+    padding-left: 250px;
+    margin-top: -180px;
+
+
+
+}
+
+#renaixement aside:nth-of-type(2) p {
+
+    margin-left: -240px;
+    color: rgb(109, 108, 108);
+    margin-top: -10px;
+}
+
+
+#barroc {
+
+    float: left;
+}
+
+#barroc h2 {
+
+
+    padding: 20px;
+    padding-left: 160px;
+    padding-right: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: -10px;
+
+
+
+}
+
+#barroc p {
+
+    padding: 20px;
+    padding-left: 160px;
+    padding-right: 100px;
+    margin-left: 80px;
+    margin-right: 600px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: -15px;
+
+
+}
+
+#barroc aside img {
+
+    width: 350px;
+    height: 200px;
+    float: right;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 160px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: -220px;
+
+
+
+}
+
+#barroc aside:nth-of-type(2) p {
+
+    float: right;
+    margin-right: 270px;
+    margin-top: -30px;
+    color: rgb(109, 108, 108);
+
+
+}
+
+#anys {
+
+    float: left;
+}
+
+#anys h2 {
+
+
+    padding: 20px;
+    padding-left: 160px;
+    padding-right: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: -10px;
+
+
+
+}
+
+#anys p {
+
+    padding: 20px;
+    padding-left: 160px;
+    padding-right: 100px;
+    margin-left: 80px;
+    margin-right: 600px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: -15px;
+
+
+}
+
+#anys aside img {
+
+    width: 350px;
+    height: 200px;
+    float: right;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 160px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: -220px;
+
+
+}
+
+#anys aside:nth-of-type(2) p {
+
+    float: right;
+    margin-right: 270px;
+    margin-top: -30px;
+    color: rgb(109, 108, 108);
+
+
+}
+
+#actual {
+
+    float: right;
+}
+
+#actual h2 {
+
+
+    padding: 20px;
+    padding-left: 600px;
+    padding-right: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 0px;
+
+
+}
+
+#actual p {
+
+    padding: 20px;
+    padding-left: 600px;
+    padding-right: 160px;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: -15px;
+
+
+}
+
+#actual aside img {
+
+    width: 350px;
+    height: 200px;
+    float: left;
+    padding-left: 250px;
+    margin-top: -180px;
+
+
+
+}
+
+#actual aside:nth-of-type(2) p {
+
+    margin-left: -210px;
+    color: rgb(109, 108, 108);
+    margin-top: -10px;
+    margin-bottom: 80px;
+}
+
+
+footer {
+
+    background-color: rgba(171, 142, 105, 0.7);
+}
+
+footer .contacte {
+
+
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+
+footer .contacte p {
+
+
+    text-align: center;
+    margin-bottom: 20px;
+
+
+
+}
+
+footer .contacte img {
+
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+}
+
+footer p {
+
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+/*LAYOUT*/
+
+#container {
+
+    display: flex;
+
+}
+
+nav {
+
+    flex: 1 100%;
+    order: 1;
+}
+
+
+header {
+
+
+    flex: 1 100%;
+    order: 1;
+
+}
+
+main {
+
+    flex: 1 100%;
+    order: 2;
+}
+
+footer {
+
+    flex: 1 100%;
+    order: 3;
+}
+
+@media (max-width: 1150px) {
+
+    #container {
+        flex-direction: column;
+    }
+
+    #lupa img {
+        padding-left: 20px;
+        margin-bottom: 8px;
+    }
+
+    .checkbtn {
+
+        display: block;
+    }
+
+    .menu-icon {
+
+        display: block;
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        cursor: pointer;
+    }
+
+    ul {
+
+        overflow: hidden;
+        position: fixed;
+        top: 100px;
+
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 20%;
+        bottom: 0;
+        text-align: center;
+    }
+
+    nav ul {
+
+        right: -100%;
+        transition: right 2s ease;
+    }
+
+
+    header ul li {
+
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+
+    }
+
+    nav ul li {
+
+        display: inline-block;
+        margin: 30px 30px;
+
+    }
+
+
+    nav ul.menu-visible {
+        right: 0;
+        transition: right 1s ease;
+    }
+
+    #capçalera {
+        padding: 100px;
+    }
+
+
+    #intro h2,
+    #intro p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    #antiguitat h2 {
+
+
+        margin-top: -20px;
+        padding-top: -40px;
+        padding-left: 350px;
+        padding-right: 100px;
+        margin-left: 80px;
+        margin-right: 80px;
+        text-align: left;
+    }
+
+    #antiguitat aside p {
+
+        padding: 20px;
+        padding-left: 350px;
+        padding-right: 20px;
+        padding-bottom: 70px;
+        text-align: justify;
+        line-height: 1.5;
+        margin-left: 80px;
+        margin-right: 80px;
+        float: right;
+
+
+
+    }
+
+    #antiguitat aside img {
+
+        width: 300px;
+        height: 150px;
+        float: left;
+        padding-left: 100px;
+        margin-top: -230px;
+
+
+
+    }
+
+    #antiguitat aside:nth-of-type(2) p {
+
+        float: left;
+        padding-left: 125px;
+        margin-top: -90px;
+        text-align: center;
+        color: rgb(109, 108, 108);
+
+
+    }
+
+
+    #edatmitjana h2 {
+
+
+        margin-top: -50px;
+        padding-top: -50px;
+        padding-left: 20px;
+        padding-right: 100px;
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-bottom: 20px;
+
+    }
+
+    #edatmitjana p {
+
+        padding: 20px;
+        padding-left: 20px;
+        padding-right: 100px;
+        margin-left: 80px;
+        margin-right: 380px;
+        text-align: justify;
+        line-height: 1.5;
+        margin-top: -40px;
+
+    }
+
+    #edatmitjana aside img {
+
+        width: 300px;
+        height: 150px;
+        float: right;
+        padding: 20px;
+        padding-left: 100px;
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-top: -200px;
+        margin-bottom: 40px;
+
+
+    }
+
+    #edatmitjana aside:nth-of-type(2) p {
+
+        float: right;
+        text-align: center;
+        color: rgb(109, 108, 108);
+        margin-right: -490px;
+        margin-top: -40px;
+
+    }
+
+
+    #renaixement h2 {
+
+
+        margin-top: -20px;
+        padding-top: -40px;
+        padding-left: 350px;
+        padding-right: 100px;
+        margin-left: 80px;
+        margin-right: 80px;
+        text-align: left;
+    }
+
+    #renaixement aside p {
+
+        padding: 20px;
+        padding-left: 350px;
+        padding-right: 20px;
+        padding-bottom: 70px;
+        text-align: justify;
+        line-height: 1.5;
+        margin-left: 80px;
+        margin-right: 80px;
+        float: right;
+
+
+
+    }
+
+    #renaixement aside img {
+
+        width: 300px;
+        height: 150px;
+        float: left;
+        padding-left: 100px;
+        margin-top: -230px;
+
+    }
+
+    #renaixement aside:nth-of-type(2) p {
+
+        float: left;
+        margin-top: -90px;
+        margin-left: -155px;
+        text-align: center;
+        color: rgb(109, 108, 108);
+
+
+    }
+
+
+    #barroc h2 {
+
+
+        margin-top: -50px;
+        padding-top: -50px;
+        padding-left: 20px;
+        padding-right: 100px;
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-bottom: 20px;
+
+    }
+
+    #barroc p {
+
+        padding: 20px;
+        padding-left: 20px;
+        padding-right: 100px;
+        margin-left: 80px;
+        margin-right: 380px;
+        text-align: justify;
+        line-height: 1.5;
+        margin-top: -40px;
+
+    }
+
+    #barroc aside img {
+
+        width: 300px;
+        height: 150px;
+        float: right;
+        padding: 20px;
+        padding-left: 100px;
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-top: -200px;
+        margin-bottom: 40px;
+
+
+    }
+
+    #barroc aside:nth-of-type(2) p {
+
+        float: right;
+        text-align: center;
+        color: rgb(109, 108, 108);
+        margin-right: -490px;
+        margin-top: -40px;
+
+    }
+
+    #anys h2 {
+
+
+        margin-top: -50px;
+        padding-top: -50px;
+        padding-left: 20px;
+        padding-right: 100px;
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-bottom: 20px;
+
+    }
+
+    #anys p {
+
+        padding: 20px;
+        padding-left: 20px;
+        padding-right: 100px;
+        margin-left: 80px;
+        margin-right: 380px;
+        text-align: justify;
+        line-height: 1.5;
+        margin-top: -40px;
+        margin-bottom: 30px;
+
+
+    }
+
+    #anys aside img {
+
+        width: 300px;
+        height: 150px;
+        float: right;
+        padding: 20px;
+        padding-left: 100px;
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-top: -200px;
+        margin-bottom: 40px;
+
+
+    }
+
+    #anys aside:nth-of-type(2) p {
+
+        float: right;
+        text-align: center;
+        color: rgb(109, 108, 108);
+        margin-right: -490px;
+        margin-top: -40px;
+
+
+    }
+
+
+    #actual h2 {
+
+
+        margin-top: -20px;
+        padding-top: -40px;
+        padding-left: 350px;
+        padding-right: 100px;
+        margin-left: 80px;
+        margin-right: 80px;
+        text-align: left;
+    }
+
+    #actual aside p {
+
+        padding: 20px;
+        padding-left: 350px;
+        padding-right: 20px;
+        padding-bottom: 70px;
+        text-align: justify;
+        line-height: 1.5;
+        margin-left: 80px;
+        margin-right: 80px;
+        float: right;
+
+
+    }
+
+    #actual aside img {
+
+        width: 300px;
+        height: 150px;
+        float: left;
+        padding-left: 100px;
+        margin-top: -230px;
+
+
+
+    }
+
+    #actual aside:nth-of-type(2) p {
+
+        float: left;
+        margin-top: -90px;
+        margin-left: -140px;
+        text-align: center;
+        color: rgb(109, 108, 108);
+
+
+    }
+
+
+
+    footer .contacte p {
+
+
+        text-align: center;
+        margin-bottom: 0;
+        padding: 0;
+
+
+    }
+
+    footer .contacte img {
+
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        padding-top: 10px;
+    }
+
+    footer p {
+
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 0;
+
+
+    }
+
+
+
+}
+
+@media (max-width: 800px) {
+
+    ul {
+
+        display: block;
+        position: fixed;
+        top: 100px;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 30%;
+        bottom: 0;
+        text-align: center;
+    }
+
+
+    header ul li {
+
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+
+    }
+
+    nav ul li {
+
+        display: inline-block;
+        margin: 30px 30px;
+
+    }
+
+    #capçalera h1 {
+
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    #intro h2,
+    #intro p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #antiguitat h2 {
+        margin-top: -30px;
+        padding-top: -50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    #antiguitat aside p {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+        float: none;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    #antiguitat aside img {
+        width: 380px;
+        height: auto;
+        float: none;
+        margin-top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #antiguitat aside:nth-of-type(2) p {
+        float: none;
+        text-align: center;
+        margin-top: -15px;
+        color: rgb(109, 108, 108);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding-left: 25px;
+
+    }
+
+    .popup-image img{
+
+        width: 90%;
+    }
+
+    #edatmitjana h2 {
+        margin-top: -30px;
+        padding-top: -50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    #edatmitjana aside p {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+        float: none;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    #edatmitjana aside img {
+        width: 380px;
+        height: auto;
+        float: none;
+        margin-top: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #edatmitjana aside:nth-of-type(2) p {
+        float: none;
+        text-align: center;
+        margin-top: -75px;
+        color: rgb(109, 108, 108);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding-left: 25px;
+    }
+
+    #renaixement h2 {
+        margin-top: -30px;
+        padding-top: -50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    #renaixement aside p {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+        float: none;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    #renaixement aside img {
+        width: 380px;
+        height: auto;
+        float: none;
+        margin-top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #renaixement aside:nth-of-type(2) p {
+        float: none;
+        text-align: center;
+        margin-top: -15px;
+        color: rgb(109, 108, 108);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding-left: 25px;
+    }
+
+    #barroc h2 {
+        margin-top: -30px;
+        padding-top: -50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    #barroc aside p {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+        float: none;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    #barroc aside img {
+        width: 380px;
+        height: auto;
+        float: none;
+        margin-top: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #barroc aside:nth-of-type(2) p {
+        float: none;
+        text-align: center;
+        margin-top: -70px;
+        color: rgb(109, 108, 108);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding-left: 25px;
+
+    }
+
+    #anys h2 {
+        margin-top: -30px;
+        padding-top: -50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    #anys aside p {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+        float: none;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    #anys aside img {
+        width: 380px;
+        height: auto;
+        float: none;
+        margin-top: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #anys aside:nth-of-type(2) p {
+        float: none;
+        text-align: center;
+        margin-top: -70px;
+        color: rgb(109, 108, 108);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding-left: 25px;
+
+    }
+
+
+
+    #actual h2 {
+        margin-top: -30px;
+        padding-top: -50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    #actual aside p {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+        float: none;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    #actual aside img {
+        width: 380px;
+        height: auto;
+        float: none;
+        margin-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #actual aside:nth-of-type(2) p {
+        float: none;
+        text-align: center;
+        margin-top: -10px;
+        color: rgb(109, 108, 108);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding-left: 25px;
+
+    }
+
+
+
+    footer .contacte p {
+
+
+        text-align: center;
+        font-size: 0.90em;
+        margin-bottom: 0;
+        padding: 0;
+
+
+    }
+
+    footer .contacte img {
+
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+        padding-top: 10px;
+    }
+
+    footer .contacte {
+
+
+        width: 32%;
+    }
+
+
+}

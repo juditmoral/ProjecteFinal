@@ -1,0 +1,572 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+#lupa img{
+
+    align-items: left;
+    height: 30px;
+    width: 30px;
+    display: block;
+    margin: -55px ;
+    margin-top: 10px;
+    margin-bottom: -30px;
+    margin-left: 10px;
+}
+nav{
+
+    text-align: right;
+    padding: 30px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+   z-index: 10;
+    
+    
+}
+
+nav ul li{
+
+    display: inline-block;
+    margin: 10px;
+    
+    
+    
+}
+nav ul li a{
+
+    text-decoration: none;
+    color:black;
+    position: relative;
+    width: 100%;
+    
+    
+}
+
+.menu-icon img{
+
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+
+    
+}
+.menu-icon, #check{
+    display: none;
+}
+
+nav ul li a::before, nav ul li a::after{
+    content: '';
+    
+    border-bottom: 2px solid rgba(171, 142, 105);
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s;
+
+}
+nav ul li a::before{
+
+    width: 90%;
+    bottom: -5px;
+    right: 0;
+
+}
+nav ul li a::after{
+
+    width: 60%;
+    bottom: -10px;
+    left: 0;
+}
+
+nav ul li a.actiu::before,
+nav ul li a:hover::before{
+
+    opacity: 1;
+    width: 70%;
+    
+
+}
+nav ul li a.actiu::after,
+nav ul li a:hover::after{
+
+    opacity: 1;
+    width: 40%;
+    
+}
+
+
+#capçalera{
+
+   
+
+    padding: 200px;
+
+    font-size: 4em;
+    background-image:linear-gradient(rgba(171, 142, 105, 0.7), rgba(206,175,134,0.7)),url(imatges/artistic3.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+
+}
+
+#intro h2{
+
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+}
+
+#intro p{
+
+    padding: 20px;
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-bottom: 80px;
+    text-align: center;
+    line-height: 1.5;
+    margin-left: 80px;
+    margin-right: 80px;
+    
+}
+
+#info{
+
+    padding-left: 160px;
+    margin-left: 80px;
+    width: 40%;
+}
+
+#info  h3{
+
+    padding-bottom: 20px;
+
+}
+
+#info  p{
+
+    text-align: justify;
+    line-height: 1.5;
+    margin-right: 50px;
+    margin-bottom: 60px;
+}
+
+.simple img{
+
+
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+
+#fotos{
+
+    float: right;
+    padding-right: 160px;
+    margin-right: 80px;
+    width: 20%;
+    border-left: 2px solid rgba(171, 142, 105);
+    margin-top: -1160px;
+    margin-bottom: 250px;
+
+}
+
+#fotos img{
+
+    width: 98%;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+#fotos p{
+
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 50px;
+    color: rgb(109, 108, 108);
+}
+
+#fotos a{
+
+
+    text-decoration: none;
+    display: block;
+    color: rgba(171, 142, 105, 0.7);
+    padding: 10px;
+    border: 1px solid rgba(171, 142, 105, 0.7);
+    border-radius: 4px;
+    transition: all 400ms ease;
+    
+    text-align: center;
+    margin-top: 30px;
+    min-width: 70px;
+    margin: 30px auto;
+    margin-left: 50px;
+    
+
+
+}
+
+#fotos a:hover{
+
+    background-color: rgb(213, 188, 154);
+    color: white;
+}
+
+.popup-image{
+
+    position: fixed;
+    top:0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image span{
+
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.popup-image img{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+
+
+
+footer{
+
+    background-color:rgba(171, 142, 105, 0.7) ;
+}
+footer .contacte{
+
+  
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+footer .contacte p{
+
+    
+    text-align: center;
+    margin-bottom: 20px;
+    
+    
+}
+footer .contacte img{
+
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+}
+
+footer p{
+
+text-align: center;
+padding-bottom: 20px;
+
+}
+
+/*LAYOUT*/
+
+#container{
+
+    display: flex;
+
+}
+
+nav{
+
+    flex: 1 100%;
+    order:1;
+}
+
+
+header{
+
+
+    flex: 1 100%;
+    order: 1;
+
+}
+
+main{
+
+    flex: 1 100%;
+    order: 2;
+}
+
+footer{
+
+    flex: 1 100%;
+    order: 3;
+}
+
+@media (max-width: 1150px) {
+    
+    #container {
+        flex-direction: column;
+    }
+   
+    #lupa img {
+        padding-left: 20px;
+        margin-bottom: 8px;
+    }
+    .checkbtn {
+
+        display: block;
+    }
+    .menu-icon{
+
+        display: block;
+        position: fixed;
+        top:40px;
+        right: 40px;
+        cursor: pointer;
+    }
+     ul{
+
+        overflow: hidden;
+        position:fixed;
+        top: 100px;
+        background-color:rgba(255, 255, 255, 0.5);
+        width: 20%;
+        bottom: 0;
+        text-align: center;
+    }
+
+    nav ul {
+       
+        right: -100%; 
+        transition: right 2s ease; 
+    }
+
+
+    header ul li{
+
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0; 
+    
+    }
+
+    nav ul li{
+
+        display: inline-block;
+        margin: 30px 30px; 
+        
+    }
+
+    nav ul.menu-visible {
+        right: 0; 
+        transition: right 1s ease;
+    }
+
+    #capçalera {
+        padding: 100px;
+    }
+
+    
+    #intro h2, #intro p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #info{
+
+        padding-left: 60px;
+        margin-left: 40px;
+        margin-right: 60px;
+        padding-left: 40px;
+        
+    }
+
+    #fotos{
+
+        margin-top: -1300px;
+        margin-bottom: 200px;
+        
+    }
+
+    #fotos a{
+
+        margin: 30px auto;
+        margin-left: 50px;
+    }
+
+    footer .contacte p{
+
+    
+        text-align: center;
+        margin-bottom: 0;
+        padding: 0;
+        
+        
+    }
+    footer .contacte img{
+    
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        padding-top: 10px;
+    }
+    
+    footer p{
+    
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 0;
+    
+    
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    ul{
+
+        display: block;
+        position:fixed;
+        top: 100px;
+        right: 0;
+        background-color:rgba(255, 255, 255, 0.5);
+        width: 30%;
+        bottom: 0;
+        text-align: center;
+    }
+
+
+    header ul li{
+
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0; 
+    
+    }
+    
+    nav ul li{
+
+        display: inline-block;
+        margin: 30px 30px; 
+       
+        
+    }
+
+    #capçalera {
+        font-size: 3em;
+    }
+
+    #info{
+
+        padding-left: 16px;
+        margin-left: 80px;
+        width: 75%;
+        margin: 10px auto;
+    }
+    
+    #info  h3{
+    
+        padding-bottom: 20px;
+    
+    }
+    
+    #info  p{
+    
+        text-align: justify;
+        line-height: 1.5;
+        margin-right: 20px;
+        padding-bottom: 200px;
+    }
+
+    .simple img{
+
+        visibility: visible;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        max-height: 60vh; 
+        width: 70%;
+        padding-bottom: 50px;
+        margin-top: -220px;
+    }
+
+
+    #fotos{
+    
+        visibility: hidden;
+        width: 0;
+        height: 0;
+
+
+    
+    }
+
+
+    .popup-image img{
+
+        width: 90%;
+    }
+    
+
+    footer .contacte p{
+
+    
+        text-align: center;
+        font-size:0.90em;
+        margin-bottom: 0;
+        padding: 0;
+        
+        
+    }
+    footer .contacte img{
+    
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+        padding-top: 10px;
+    }
+
+    footer .contacte{
+
+
+        width: 32%;
+    }
+
+
+
+
+}
